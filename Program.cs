@@ -1,3 +1,7 @@
 ﻿using AoC;
 
-Console.WriteLine(Day4.ExecutePart2());
+var before = DateTime.UtcNow;
+
+Console.WriteLine($"Result: {Day4.ExecutePart2()}");
+
+Console.WriteLine($"Time elapsed: {DateTime.UtcNow - before}");

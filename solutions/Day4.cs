@@ -30,8 +30,6 @@ public static class Day4
 
     public static string ExecutePart2()
     {
-        var before = DateTime.UtcNow;
-
         var sum = 0;
         var lines = File.ReadAllText(@$".\data\{FileName}.txt").SplitLines().ToArray();
 
@@ -54,7 +52,6 @@ public static class Day4
 
             sum += amountOfActualCard;
         }
-        Console.WriteLine(DateTime.UtcNow - before);
         return sum.ToString();
     }
 }

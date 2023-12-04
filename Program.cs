@@ -1,3 +1,3 @@
 ﻿using AoC;
 
-Console.WriteLine(Day3.ExecutePart2());
+Console.WriteLine(Day4.ExecutePart2());

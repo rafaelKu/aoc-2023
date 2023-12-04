@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace AoC;
 public static class Extensions
@@ -8,15 +8,9 @@ public static class Extensions
         return str.Split("\r\n");
     }
 
-    public static string ReplaceWithRockPaperScissor(this char chr)
+    public static IEnumerable<int> GetNumbers(this string str)
     {
-        return chr switch
-        {
-            'A' or 'X' => "Rock",
-            'B' or 'Y' => "Paper",
-            'C' or 'Z' => "Scissor",
-            _ => throw new System.Exception(),
-        };
+        return Regex.Matches(str, @"\d+").Select(x => int.Parse(x.Value));
     }
 
     public static string Reverse(this string str)

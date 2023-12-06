@@ -8,6 +8,11 @@ public static class Extensions
         return str.Split("\r\n");
     }
 
+    public static IEnumerable<long> GetNumbersAsLong(this string str)
+    {
+        return Regex.Matches(str, @"\d+").Select(x => long.Parse(x.Value));
+    }
+
     public static IEnumerable<int> GetNumbers(this string str)
     {
         return Regex.Matches(str, @"\d+").Select(x => int.Parse(x.Value));
